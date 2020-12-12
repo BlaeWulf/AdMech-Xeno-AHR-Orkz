@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SeedsPlease</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+		<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<SeedsPlease.SeedDef ParentName="SeedBase">
+							<defName>Seed_OG_Orkoid_Fungus</defName>
+							<label>orkoid fungus seeds</label>
+							<sources>
+								<li>OG_Plant_OrkoidFungus</li>
+							</sources>
+						</SeedsPlease.SeedDef>
+						<RecipeDef ParentName="ExtractSeed">
+							<defName>ExtractSeedOrkoidFungus</defName>
+							<label>extract orkoid fungus seeds</label>
+							<description>Extract seeds from Raw Orkoid Fungus.</description>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>OG_Plant_Orkoid_Fungus</li>
+										</thingDefs>
+									</filter>
+									<count>10</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>RawCotton</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<Seed_OG_Orkoid_Fungus>5</Seed_OG_Orkoid_Fungus>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
