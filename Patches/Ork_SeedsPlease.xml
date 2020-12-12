@@ -34,7 +34,7 @@
 							</ingredients>
 							<fixedIngredientFilter>
 								<thingDefs>
-									<li>RawCotton</li>
+									<li>OG_Plant_Orkoid_Fungus</li>
 								</thingDefs>
 							</fixedIngredientFilter>
 							<products>
